@@ -1,0 +1,25 @@
+{
+    "name": "lithemod/events",
+    "description": "Lithe Events: A powerful and lightweight event management system for PHP projects, designed to simplify communication between components intuitively and efficiently. Easily create, register, and emit events, making your code more modular and reactive. Transform your applications into dynamic experiences with Lithe Events!",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lithe\\Events\\": "src/Events/"
+        },
+        "files": [
+            "src/Orbis/EventDispatcher.php"
+        ]
+    },
+    "require": {
+        "lithemod/orbis": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "phpunit"
+    }
+}
