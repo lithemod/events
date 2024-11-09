@@ -9,9 +9,9 @@ use Lithe\Orbis\Orbis;
  * Registers a listener for the specified event.
  *
  * @param string   $eventName The name of the event to listen for.
- * @param callable $listener   The listener callback to be executed when the event is emitted.
+ * @param callable|array $listener   The listener callback to be executed when the event is emitted.
  */
-function on(string $eventName, callable $listener): void {
+function on(string $eventName, callable|array $listener): void {
     // Retrieve the event dispatcher instance from the Orbis singleton.
     $dispatcher = Orbis::instance(\Lithe\Events\EventDispatcher::class);
 
@@ -48,9 +48,9 @@ function emit(Event $event): void {
  * Removes a listener for the specified event.
  *
  * @param string   $eventName The name of the event to stop listening for.
- * @param callable $listener   The listener callback to be removed.
+ * @param callable|array $listener   The listener callback to be removed.
  */
-function off(string $eventName, callable $listener): void {
+function off(string $eventName, callable|array $listener): void {
     // Retrieve the event dispatcher instance from the Orbis singleton.
     $dispatcher = Orbis::instance(\Lithe\Events\EventDispatcher::class);
 
